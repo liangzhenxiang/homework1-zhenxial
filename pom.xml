@@ -106,7 +106,7 @@
     </dependency>
   </dependencies>
   <scm>
-  	<connection>cm:git:git@github.com:liangzhenxiang/Hw1-zhenxial.git</connection>
-  	<developerConnection>cm:git:git@github.com:liangzhenxiang/Hw1-zhenxial.git</developerConnection>
+  	<connection>scm:git:git://github.com:liangzhenxiang/homework1-zhenxial.git</connection>
+  	<developerConnection>scm:git:git://github.com:liangzhenxiang/homework1-zhenxial.git</developerConnection>
   </scm>
 </project>

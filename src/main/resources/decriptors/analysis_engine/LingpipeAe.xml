@@ -48,7 +48,7 @@
         <name>modelFile</name>
         <description/>
         <fileResourceSpecifier>
-          <fileUrl>/Users/zhenxiang/Documents/workspace/hw1-zhenxial/src/main/resources/models/ne-en-bio-genetag.HmmChunker</fileUrl>
+          <fileUrl>.//models//ne-en-bio-genetag.HmmChunker</fileUrl>
         </fileResourceSpecifier>
       </externalResource>
     </externalResources>
