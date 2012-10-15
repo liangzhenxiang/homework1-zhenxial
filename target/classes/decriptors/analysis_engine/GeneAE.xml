@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>
+  <annotatorImplementationName>analysisEngine.GeneAE</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>GeneAE</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <typeSystemDescription>
+      <imports>
+        <import name="decriptors.type_system.SentenceTS"/>
+        <import location="../type_system/GeneTS.xml"/>
+      </imports>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">typeSystem.Sentence</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">typeSystem.Gene</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <externalResourceDependencies>
+    <externalResourceDependency>
+      <key>genes</key>
+      <description/>
+      <optional>false</optional>
+    </externalResourceDependency>
+  </externalResourceDependencies>
+  <resourceManagerConfiguration>
+    <externalResources>
+      <externalResource>
+        <name>genes</name>
+        <description/>
+        <fileResourceSpecifier>
+          <fileUrl>/Users/zhenxiang/Documents/workspace/hw1-zhenxial/src/main/resources/data/genenames.txt</fileUrl>
+        </fileResourceSpecifier>
+      </externalResource>
+    </externalResources>
+    <externalResourceBindings>
+      <externalResourceBinding>
+        <key>genes</key>
+        <resourceName>genes</resourceName>
+      </externalResourceBinding>
+    </externalResourceBindings>
+  </resourceManagerConfiguration>
+</analysisEngineDescription>
