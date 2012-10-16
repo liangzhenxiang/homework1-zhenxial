@@ -73,7 +73,7 @@ public class myCASConsumer extends CasConsumer_ImplBase {
     while (annotationIter.hasNext()) {
       Gene gannotation = (Gene) annotationIter.next();
       try {
-        fileWriter.write(gannotation.getSentenceId()+"|"+gannotation.getBe()+" "+gannotation.getEn()+"|"+gannotation.getTag()+"\n");
+        fileWriter.write(gannotation.getSentenceId()+"|"+gannotation.getBegin()+" "+gannotation.getEnd()+"|"+gannotation.getTag()+"\n");
         fileWriter.flush();
         //System.out.println(gannotation.getSentenceId()+"|"+gannotation.getBe()+" "+gannotation.getEn()+"|"+gannotation.getTag()+"\n");
       } catch (IOException e) {

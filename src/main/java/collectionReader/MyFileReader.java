@@ -17,15 +17,11 @@ import org.apache.uima.util.ProgressImpl;
 
 import typeSystem.Sentence;
 
-public class OneFileReader extends CollectionReader_ImplBase {
-  /**
-   * Name of configuration parameter that must be set to the path of a directory containing input
-   * files.
-   */
+public class MyFileReader extends CollectionReader_ImplBase {
   public static final String PARAM_INPUTDIR = "InputDirectory";
   
   private File myFile;
-  private Pattern sentencePattern = Pattern.compile("([^ ]*)[ ](.*)[\n]");
+  private Pattern sentencePattern = Pattern.compile("(.*)[\n]");
   private Matcher matcher;
   private int pos;
 

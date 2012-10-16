@@ -9,7 +9,7 @@
                 <nameValuePair>
                     <name>InputDirectory</name>
                     <value>
-                        <string>src/main/resources/input</string>
+                        <string>src/main/resources/data</string>
                     </value>
                 </nameValuePair>
             </configurationParameterSettings>
@@ -43,7 +43,7 @@
                 <nameValuePair>
                     <name>OutputDir</name>
                     <value>
-                        <string>src/main/resources/output</string>
+                        <string>src/main/resources/data</string>
                     </value>
                 </nameValuePair>
             </configurationParameterSettings>

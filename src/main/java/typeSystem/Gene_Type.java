@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Sun Oct 14 15:04:01 EDT 2012
+ * Updated by JCasGen Tue Oct 16 16:46:26 EDT 2012
  * @generated */
 public class Gene_Type extends Annotation_Type {
   /** @generated */
@@ -61,7 +61,9 @@ public class Gene_Type extends Annotation_Type {
     ll_cas.ll_setStringValue(addr, casFeatCode_tag, v);}
     
   
- 
+
+
+
   /** @generated */
   final Feature casFeat_sentenceId;
   /** @generated */
@@ -80,44 +82,6 @@ public class Gene_Type extends Annotation_Type {
     
   
  
-  /** @generated */
-  final Feature casFeat_be;
-  /** @generated */
-  final int     casFeatCode_be;
-  /** @generated */ 
-  public int getBe(int addr) {
-        if (featOkTst && casFeat_be == null)
-      jcas.throwFeatMissing("be", "typeSystem.Gene");
-    return ll_cas.ll_getIntValue(addr, casFeatCode_be);
-  }
-  /** @generated */    
-  public void setBe(int addr, int v) {
-        if (featOkTst && casFeat_be == null)
-      jcas.throwFeatMissing("be", "typeSystem.Gene");
-    ll_cas.ll_setIntValue(addr, casFeatCode_be, v);}
-    
-  
- 
-  /** @generated */
-  final Feature casFeat_en;
-  /** @generated */
-  final int     casFeatCode_en;
-  /** @generated */ 
-  public int getEn(int addr) {
-        if (featOkTst && casFeat_en == null)
-      jcas.throwFeatMissing("en", "typeSystem.Gene");
-    return ll_cas.ll_getIntValue(addr, casFeatCode_en);
-  }
-  /** @generated */    
-  public void setEn(int addr, int v) {
-        if (featOkTst && casFeat_en == null)
-      jcas.throwFeatMissing("en", "typeSystem.Gene");
-    ll_cas.ll_setIntValue(addr, casFeatCode_en, v);}
-    
-  
-
-
-
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
   public Gene_Type(JCas jcas, Type casType) {
@@ -125,20 +89,12 @@ public class Gene_Type extends Annotation_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_tag = jcas.getRequiredFeatureDE(casType, "tag", "uima.cas.String", featOkTst);
-    casFeatCode_tag  = (null == casFeat_tag) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_tag).getCode();
-
- 
     casFeat_sentenceId = jcas.getRequiredFeatureDE(casType, "sentenceId", "uima.cas.String", featOkTst);
     casFeatCode_sentenceId  = (null == casFeat_sentenceId) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_sentenceId).getCode();
 
  
-    casFeat_be = jcas.getRequiredFeatureDE(casType, "be", "uima.cas.Integer", featOkTst);
-    casFeatCode_be  = (null == casFeat_be) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_be).getCode();
-
- 
-    casFeat_en = jcas.getRequiredFeatureDE(casType, "en", "uima.cas.Integer", featOkTst);
-    casFeatCode_en  = (null == casFeat_en) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_en).getCode();
+    casFeat_tag = jcas.getRequiredFeatureDE(casType, "tag", "uima.cas.String", featOkTst);
+    casFeatCode_tag  = (null == casFeat_tag) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_tag).getCode();
 
   }
 }

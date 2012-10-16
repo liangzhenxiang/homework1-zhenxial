@@ -7,7 +7,7 @@ import java.net.URL;
 public class test {
 public static void main(String[] args) throws Exception {
     
-    URL url = new URL("http://bergmanlab.smith.man.ac.uk:8081/?text=resistant rickets");
+    URL url = new URL("http://bergmanlab.smith.man.ac.uk:8081/?text=Albumin");
     InputStream in = url.openStream();
     BufferedReader bin = new BufferedReader(new InputStreamReader(in, "GB2312"));
     String s = null;

@@ -77,8 +77,7 @@ public class GeneAE extends JCasAnnotator_ImplBase {
         Integer end = entry.getValue();
         Gene  gAnnotation = new Gene(aJCas);
         gAnnotation.setTag(sAnnotation.getText().substring(begin, end));
-        gAnnotation.setBe(countOffSet(begin,sAnnotation.getText()));
-        gAnnotation.setEn(countOffSet(end,sAnnotation.getText())-1);
+        gAnnotation.setBegin(countOffSet(begin,sAnnotation.getText()));
         gAnnotation.setSentenceId(sAnnotation.getId());
         //System.out.println(gAnnotation.getSentenceId()+"|"+gAnnotation.getBe()+" "+gAnnotation.getEn()+"|"+gAnnotation.getTag()+"\n");
         gAnnotation.addToIndexes();

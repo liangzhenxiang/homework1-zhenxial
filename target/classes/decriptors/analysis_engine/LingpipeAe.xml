@@ -12,8 +12,8 @@
     <configurationParameterSettings/>
     <typeSystemDescription>
       <imports>
-        <import location="../type_system/GeneTS.xml"/>
         <import location="../type_system/SentenceTS.xml"/>
+        <import name="decriptors.type_system.GeneTS"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>

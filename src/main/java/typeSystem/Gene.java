@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Sun Oct 14 15:04:01 EDT 2012
- * XML source: /Users/zhenxiang/Documents/workspace/hw1-zhenxial/src/main/resources/decriptors/type_system/GeneTS.xml
+ * Updated by JCasGen Tue Oct 16 16:46:26 EDT 2012
+ * XML source: /Users/zhenxiang/Documents/workspace/homework1-zhenxial/src/main/resources/decriptors/type_system/GeneTS.xml
  * @generated */
 public class Gene extends Annotation {
   /** @generated
@@ -78,9 +78,7 @@ public class Gene extends Annotation {
     if (Gene_Type.featOkTst && ((Gene_Type)jcasType).casFeat_tag == null)
       jcasType.jcas.throwFeatMissing("tag", "typeSystem.Gene");
     jcasType.ll_cas.ll_setStringValue(addr, ((Gene_Type)jcasType).casFeatCode_tag, v);}    
-   
-    
-  //*--------------*
+    //*--------------*
   //* Feature: sentenceId
 
   /** getter for sentenceId - gets 
@@ -98,40 +96,6 @@ public class Gene extends Annotation {
     jcasType.ll_cas.ll_setStringValue(addr, ((Gene_Type)jcasType).casFeatCode_sentenceId, v);}    
    
     
-  //*--------------*
-  //* Feature: be
-
-  /** getter for be - gets 
-   * @generated */
-  public int getBe() {
-    if (Gene_Type.featOkTst && ((Gene_Type)jcasType).casFeat_be == null)
-      jcasType.jcas.throwFeatMissing("be", "typeSystem.Gene");
-    return jcasType.ll_cas.ll_getIntValue(addr, ((Gene_Type)jcasType).casFeatCode_be);}
-    
-  /** setter for be - sets  
-   * @generated */
-  public void setBe(int v) {
-    if (Gene_Type.featOkTst && ((Gene_Type)jcasType).casFeat_be == null)
-      jcasType.jcas.throwFeatMissing("be", "typeSystem.Gene");
-    jcasType.ll_cas.ll_setIntValue(addr, ((Gene_Type)jcasType).casFeatCode_be, v);}    
-   
-    
-  //*--------------*
-  //* Feature: en
-
-  /** getter for en - gets 
-   * @generated */
-  public int getEn() {
-    if (Gene_Type.featOkTst && ((Gene_Type)jcasType).casFeat_en == null)
-      jcasType.jcas.throwFeatMissing("en", "typeSystem.Gene");
-    return jcasType.ll_cas.ll_getIntValue(addr, ((Gene_Type)jcasType).casFeatCode_en);}
-    
-  /** setter for en - sets  
-   * @generated */
-  public void setEn(int v) {
-    if (Gene_Type.featOkTst && ((Gene_Type)jcasType).casFeat_en == null)
-      jcasType.jcas.throwFeatMissing("en", "typeSystem.Gene");
-    jcasType.ll_cas.ll_setIntValue(addr, ((Gene_Type)jcasType).casFeatCode_en, v);}    
-  }
+}
 
     
