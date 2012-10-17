@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<casConsumerDescription xmlns="http://uima.apache.org/resourceSpecifier">
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <implementationName>casConsumer.myCASConsumer</implementationName>
-  <processingResourceMetaData>
-    <name>MyCASConsumer</name>
+  <primitive>true</primitive>
+  <annotatorImplementationName>analysisEngine.OnlineCheckAE</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>OnlineCheckAE</name>
     <description/>
     <version>1.0</version>
     <vendor/>
-    <configurationParameters>
-      <configurationParameter>
-        <name>OutputDir</name>
-        <type>String</type>
-        <multiValued>false</multiValued>
-        <mandatory>false</mandatory>
-      </configurationParameter>
-    </configurationParameters>
+    <configurationParameters/>
     <configurationParameterSettings/>
     <typeSystemDescription>
       <imports>
@@ -28,15 +22,17 @@
         <inputs>
           <type allAnnotatorFeatures="true">typeSystem.Gene</type>
         </inputs>
-        <outputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">typeSystem.Gene</type>
+        </outputs>
         <languagesSupported/>
       </capability>
     </capabilities>
     <operationalProperties>
       <modifiesCas>true</modifiesCas>
-      <multipleDeploymentAllowed>false</multipleDeploymentAllowed>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
       <outputsNewCASes>false</outputsNewCASes>
     </operationalProperties>
-  </processingResourceMetaData>
+  </analysisEngineMetaData>
   <resourceManagerConfiguration/>
-</casConsumerDescription>
+</analysisEngineDescription>

@@ -13,13 +13,16 @@
     <typeSystemDescription>
       <imports>
         <import location="../type_system/SentenceTS.xml"/>
+        <import name="decriptors.type_system.Line"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>
     <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs/>
+        <inputs>
+          <type allAnnotatorFeatures="true">typeSystem.Line</type>
+        </inputs>
         <outputs>
           <type allAnnotatorFeatures="true">Sentence</type>
         </outputs>

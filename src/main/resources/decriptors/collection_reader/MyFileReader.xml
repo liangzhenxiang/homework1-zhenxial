@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<casConsumerDescription xmlns="http://uima.apache.org/resourceSpecifier">
+<collectionReaderDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
-  <implementationName>casConsumer.myCASConsumer</implementationName>
+  <implementationName>collectionReader.MyFileReader</implementationName>
   <processingResourceMetaData>
-    <name>MyCASConsumer</name>
+    <name>MyFileReader</name>
     <description/>
     <version>1.0</version>
     <vendor/>
     <configurationParameters>
       <configurationParameter>
-        <name>OutputDir</name>
+        <name>InputDirectory</name>
         <type>String</type>
         <multiValued>false</multiValued>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
       </configurationParameter>
     </configurationParameters>
     <configurationParameterSettings/>
     <typeSystemDescription>
       <imports>
-        <import name="decriptors.type_system.GeneTS"/>
+        <import name="decriptors.type_system.Line"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>
     <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs>
-          <type allAnnotatorFeatures="true">typeSystem.Gene</type>
-        </inputs>
-        <outputs/>
+        <inputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">typeSystem.Line</type>
+        </outputs>
         <languagesSupported/>
       </capability>
     </capabilities>
     <operationalProperties>
       <modifiesCas>true</modifiesCas>
       <multipleDeploymentAllowed>false</multipleDeploymentAllowed>
-      <outputsNewCASes>false</outputsNewCASes>
+      <outputsNewCASes>true</outputsNewCASes>
     </operationalProperties>
   </processingResourceMetaData>
   <resourceManagerConfiguration/>
-</casConsumerDescription>
+</collectionReaderDescription>

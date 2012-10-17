@@ -15,6 +15,7 @@ import org.apache.uima.util.FileUtils;
 import org.apache.uima.util.Progress;
 import org.apache.uima.util.ProgressImpl;
 
+import typeSystem.Line;
 import typeSystem.Sentence;
 
 public class MyFileReader extends CollectionReader_ImplBase {
@@ -41,6 +42,7 @@ public class MyFileReader extends CollectionReader_ImplBase {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
+    //System.out.println(text);
     matcher = sentencePattern.matcher(text);
     pos = 0;
     
@@ -54,11 +56,9 @@ public class MyFileReader extends CollectionReader_ImplBase {
     } catch (CASException e) {
       throw new CollectionException(e);
     }
-    Sentence annotation = new Sentence(jcas);
-    annotation.setBegin(matcher.start());
-    annotation.setEnd(matcher.end());
-    annotation.setId(matcher.group(1));
-    annotation.setText(matcher.group(2));
+    Line annotation = new Line(jcas);
+    annotation.setText(matcher.group(1));
+    //System.out.println(matcher.group(1));
     
     annotation.addToIndexes();
     pos = matcher.end();
@@ -67,6 +67,7 @@ public class MyFileReader extends CollectionReader_ImplBase {
   @Override
   public boolean hasNext() throws IOException, CollectionException {
     // TODO Auto-generated method stub
+    //System.out.println(pos);
     return matcher.find(pos);
   }
 

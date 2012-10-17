@@ -72,16 +72,17 @@ public class LingpipeAE extends JCasAnnotator_ImplBase {
         Chunk chunk = it.next();
         int begin = chunk.start();
         int end = chunk.end();
-        if (Math.pow(2.0,chunk.score()) > 0.6)
-        {
+        //if (Math.pow(2.0,chunk.score()) > 0.6)
+        //{
           Gene  gAnnotation = new Gene(aJCas);
           gAnnotation.setTag(sAnnotation.getText().substring(begin, end));
           gAnnotation.setBegin(countOffSet(begin,sAnnotation.getText()));
           gAnnotation.setEnd(countOffSet(end,sAnnotation.getText())-1);
           gAnnotation.setSentenceId(sAnnotation.getId());
+          gAnnotation.setConfidence(Math.pow(2.0,chunk.score()));
           //System.out.println(gAnnotation.getSentenceId()+"|"+gAnnotation.getBe()+" "+gAnnotation.getEn()+"|"+gAnnotation.getTag()+"\n");
           gAnnotation.addToIndexes();
-        }
+       /* }
         else if (Math.pow(2.0,chunk.score()) < 0)
         {
           String tag = sAnnotation.getText().substring(begin, end);
@@ -120,7 +121,7 @@ public class LingpipeAE extends JCasAnnotator_ImplBase {
             // TODO Auto-generated catch block
             //e.printStackTrace();
           }
-        }
+        }*/
       }
     }
 

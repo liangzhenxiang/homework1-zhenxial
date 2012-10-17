@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Sun Oct 14 15:04:01 EDT 2012 */
+/* First created by JCasGen Tue Oct 16 20:16:16 EDT 2012 */
 package typeSystem;
 
 import org.apache.uima.jcas.JCas; 
@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Tue Oct 16 16:46:26 EDT 2012
+ * Updated by JCasGen Tue Oct 16 20:16:16 EDT 2012
  * XML source: /Users/zhenxiang/Documents/workspace/homework1-zhenxial/src/main/resources/decriptors/type_system/GeneTS.xml
  * @generated */
 public class Gene extends Annotation {
@@ -63,22 +63,6 @@ public class Gene extends Annotation {
  
     
   //*--------------*
-  //* Feature: tag
-
-  /** getter for tag - gets 
-   * @generated */
-  public String getTag() {
-    if (Gene_Type.featOkTst && ((Gene_Type)jcasType).casFeat_tag == null)
-      jcasType.jcas.throwFeatMissing("tag", "typeSystem.Gene");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((Gene_Type)jcasType).casFeatCode_tag);}
-    
-  /** setter for tag - sets  
-   * @generated */
-  public void setTag(String v) {
-    if (Gene_Type.featOkTst && ((Gene_Type)jcasType).casFeat_tag == null)
-      jcasType.jcas.throwFeatMissing("tag", "typeSystem.Gene");
-    jcasType.ll_cas.ll_setStringValue(addr, ((Gene_Type)jcasType).casFeatCode_tag, v);}    
-    //*--------------*
   //* Feature: sentenceId
 
   /** getter for sentenceId - gets 
@@ -96,6 +80,40 @@ public class Gene extends Annotation {
     jcasType.ll_cas.ll_setStringValue(addr, ((Gene_Type)jcasType).casFeatCode_sentenceId, v);}    
    
     
-}
+  //*--------------*
+  //* Feature: tag
+
+  /** getter for tag - gets 
+   * @generated */
+  public String getTag() {
+    if (Gene_Type.featOkTst && ((Gene_Type)jcasType).casFeat_tag == null)
+      jcasType.jcas.throwFeatMissing("tag", "typeSystem.Gene");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((Gene_Type)jcasType).casFeatCode_tag);}
+    
+  /** setter for tag - sets  
+   * @generated */
+  public void setTag(String v) {
+    if (Gene_Type.featOkTst && ((Gene_Type)jcasType).casFeat_tag == null)
+      jcasType.jcas.throwFeatMissing("tag", "typeSystem.Gene");
+    jcasType.ll_cas.ll_setStringValue(addr, ((Gene_Type)jcasType).casFeatCode_tag, v);}    
+   
+    
+  //*--------------*
+  //* Feature: confidence
+
+  /** getter for confidence - gets 
+   * @generated */
+  public double getConfidence() {
+    if (Gene_Type.featOkTst && ((Gene_Type)jcasType).casFeat_confidence == null)
+      jcasType.jcas.throwFeatMissing("confidence", "typeSystem.Gene");
+    return jcasType.ll_cas.ll_getDoubleValue(addr, ((Gene_Type)jcasType).casFeatCode_confidence);}
+    
+  /** setter for confidence - sets  
+   * @generated */
+  public void setConfidence(double v) {
+    if (Gene_Type.featOkTst && ((Gene_Type)jcasType).casFeat_confidence == null)
+      jcasType.jcas.throwFeatMissing("confidence", "typeSystem.Gene");
+    jcasType.ll_cas.ll_setDoubleValue(addr, ((Gene_Type)jcasType).casFeatCode_confidence, v);}    
+  }
 
     
