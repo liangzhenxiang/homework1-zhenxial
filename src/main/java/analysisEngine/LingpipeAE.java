@@ -22,11 +22,25 @@ import com.aliasi.util.AbstractExternalizable;
 import typeSystem.Gene;
 import typeSystem.Sentence;
 
-
+/**
+ * an analysis engine that analyze a string and find the gene tag in it <br>
+ * I use lingpipe to analyze the string and generate a confident value <br>
+ * @author zhenxiang
+ *
+ */
 
 public class LingpipeAE extends JCasAnnotator_ImplBase {
+  /**
+   * chunker is the object that analyzes the string
+   */
   static ConfidenceChunker chunker = null;
   
+  /**
+   * a function that calculates the number of chars,except space,  before a position in the string <br>
+   * @param end: position
+   * @param sentence: the string to be calculate
+   * @return
+   */
   int countOffSet(int end, String sentence)
   {
     int count = 0;
@@ -38,6 +52,10 @@ public class LingpipeAE extends JCasAnnotator_ImplBase {
     return count;  
   }
 
+  /**
+   * the function that analyze all the sentences in the JCas and use lingpipe to analyze the sentence,<br>
+   * then generate gene tags with confidence value
+   */
   @Override
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     // TODO Auto-generated method stub

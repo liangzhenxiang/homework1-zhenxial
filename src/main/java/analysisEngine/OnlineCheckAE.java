@@ -17,8 +17,18 @@ import org.apache.uima.jcas.JCas;
 import typeSystem.Gene;
 import typeSystem.Line;
 
+/**
+ * an analysis engine that search a tag online to validate whether it is a gene
+ * @author zhenxiang
+ *
+ */
 public class OnlineCheckAE extends JCasAnnotator_ImplBase {
 
+  /**
+   * the function that search a tag online to validate whether it is a gene <br>
+   * I get the tag from the gene annotation, if it's confident between 0.6 to 0.5, <br>
+   * I search it online
+   */
   public void process(JCas aJCas) throws AnalysisEngineProcessException {
     // TODO Auto-generated method stub
     Iterator annotationIter = aJCas.getAnnotationIndex(Gene.type).iterator();

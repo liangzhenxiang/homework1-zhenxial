@@ -18,6 +18,15 @@ import org.apache.uima.util.ProgressImpl;
 import typeSystem.Line;
 import typeSystem.Sentence;
 
+/**
+ * A simple collection that read hw1.in from a directory  <br>
+ * It can be configured with the following parameter <br>
+ * <ul>
+ * <li><code>InputDirectory</code> - path to directory containing files</li>
+ * </ul>
+ * @author zhenxiang
+ *
+ */
 public class MyFileReader extends CollectionReader_ImplBase {
   public static final String PARAM_INPUTDIR = "InputDirectory";
   
@@ -26,6 +35,9 @@ public class MyFileReader extends CollectionReader_ImplBase {
   private Matcher matcher;
   private int pos;
 
+  /**
+   * Get the directory , open the file, and create a matcher to get a line of text
+   */
   public void initialize() throws ResourceInitializationException {
     /*File directory = new File(((String) getConfigParameterValue(PARAM_INPUTDIR)).trim());
     File[] files = directory.listFiles();
@@ -47,6 +59,11 @@ public class MyFileReader extends CollectionReader_ImplBase {
     pos = 0;
     
   }
+  
+  /**
+   *  @see org.apache.uima.collection.CollectionReader#getNext(org.apache.uima.cas.CAS)
+   * every time we read a line of text and create a jacs
+   */
   @Override
   public void getNext(CAS aCAS) throws IOException, CollectionException {
     // TODO Auto-generated method stub
@@ -64,6 +81,10 @@ public class MyFileReader extends CollectionReader_ImplBase {
     pos = matcher.end();
   }
 
+  /**
+   * @see org.apache.uima.collection.CollectionReader#hasNext()
+   * if there are lines of text, return true
+   */
   @Override
   public boolean hasNext() throws IOException, CollectionException {
     // TODO Auto-generated method stub
@@ -71,12 +92,18 @@ public class MyFileReader extends CollectionReader_ImplBase {
     return matcher.find(pos);
   }
 
+  /**
+   * @see org.apache.uima.collection.base_cpm.BaseCollectionReader#getProgress()
+   */
   @Override
   public Progress[] getProgress() {
     // TODO Auto-generated method stub
     return new Progress[] { new ProgressImpl(1, 1, Progress.ENTITIES) };
   }
 
+  /**
+   * @see org.apache.uima.collection.base_cpm.BaseCollectionReader#close()
+   */
   @Override
   public void close() throws IOException {
     // TODO Auto-generated method stub

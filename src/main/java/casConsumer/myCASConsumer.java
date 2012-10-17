@@ -23,6 +23,15 @@ import org.apache.uima.util.ProcessTrace;
 import typeSystem.Gene;
 import typeSystem.Sentence;
 
+/**
+ * a simple CAS consumer that write output to hw1-zhenxiaa.out in a directory <br>
+ * It can be configured with the following parameter <br>
+ * <ul>
+ * <li><code>InputDirectory</code> - path to directory containing files</li>
+ * </ul>
+ * @author zhenxiang
+ *
+ */
 public class myCASConsumer extends CasConsumer_ImplBase {
   File outFile;
 
@@ -48,9 +57,8 @@ public class myCASConsumer extends CasConsumer_ImplBase {
   }
 
   /**
-   * Processes the CasContainer which was populated by the TextAnalysisEngines. <br>
-   * In this case, the CAS index is iterated over selected annotations and printed out into an
-   * output file
+   * In this case, the CAS index is iterated over gene annotations which has a confidence higher that 0.6 <br>
+   * and printed out into an output file
    * 
    * @param aCAS
    *          CasContainer which has been populated by the TAEs
@@ -85,12 +93,30 @@ public class myCASConsumer extends CasConsumer_ImplBase {
     }
      
   }
+  
+  /**
+   * Called when the entire collection is completed.
+   * 
+   * @param aTrace
+   *          ProcessTrace object that will log events in this method.
+   * @throws ResourceProcessException
+   *           if there is an error in processing the Resource
+   * @throws IOException
+   *           if there is an IO Error
+   * @see org.apache.uima.collection.CasConsumer#collectionProcessComplete(ProcessTrace)
+   */
   public void collectionProcessComplete(ProcessTrace aTrace) throws ResourceProcessException,
     IOException {
       if (fileWriter != null) {
         fileWriter.close();
       }
   }
+  
+  /**
+   * Called if clean up is needed in case of exit under error conditions.
+   * 
+   * @see org.apache.uima.resource.Resource#destroy()
+   */
   public void destroy() {
     if (fileWriter != null) {
       try {
