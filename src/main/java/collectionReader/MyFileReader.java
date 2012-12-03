@@ -1,7 +1,10 @@
 package collectionReader;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -46,7 +49,10 @@ public class MyFileReader extends CollectionReader_ImplBase {
         myFile = files[i];
     }*/
     String path = ((String) getConfigParameterValue(PARAM_INPUTDIR)).trim();
-    myFile = new File(path+"/hw1.in");
+    //myFile = new File(path+"/hw1.in");
+    myFile = new File("/data/hw1.in");
+    //InputStream stream = this.getClass().getResourceAsStream("/data/hw1.in");
+    //BufferedReader br = new BufferedReader(new InputStreamReader(stream));
     String text = null;
     try {
       text = FileUtils.file2String(myFile);

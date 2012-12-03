@@ -47,7 +47,8 @@ public class myCASConsumer extends CasConsumer_ImplBase {
 
     // extract configuration parameter settings
     String oDir = (String) getUimaContext().getConfigParameterValue("OutputDir");
-    outFile = new File(oDir.trim()+"/hw1-zhenxial.out");
+    //outFile = new File(oDir.trim()+"/hw1-zhenxial.out");
+    outFile = new File("/data/hw1-zhenxial.out");
     try {
       fileWriter = new FileWriter(outFile);
     } catch (IOException e1) {
