@@ -50,7 +50,7 @@ public class MyFileReader extends CollectionReader_ImplBase {
     }*/
     String path = ((String) getConfigParameterValue(PARAM_INPUTDIR)).trim();
     //myFile = new File(path+"/hw1.in");
-    myFile = new File("/data/hw1.in");
+    myFile = new File("data/hw1.in");
     //InputStream stream = this.getClass().getResourceAsStream("/data/hw1.in");
     //BufferedReader br = new BufferedReader(new InputStreamReader(stream));
     String text = null;
