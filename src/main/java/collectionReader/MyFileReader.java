@@ -48,8 +48,8 @@ public class MyFileReader extends CollectionReader_ImplBase {
       if (!files[i].isDirectory())
         myFile = files[i];
     }*/
-    String path = ((String) getConfigParameterValue(PARAM_INPUTDIR)).trim();
-    myFile = new File(path+"/hw1.in");
+    String path = (String) getUimaContext().getConfigParameterValue("InputFile");
+    myFile = new File(path);
     //InputStream stream = this.getClass().getResourceAsStream("/data/hw1.in");
     //BufferedReader br = new BufferedReader(new InputStreamReader(stream));
     String text = null;

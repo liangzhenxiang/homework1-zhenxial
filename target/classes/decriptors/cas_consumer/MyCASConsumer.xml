@@ -9,13 +9,20 @@
     <vendor/>
     <configurationParameters>
       <configurationParameter>
-        <name>OutputDir</name>
+        <name>OutputFile</name>
         <type>String</type>
         <multiValued>false</multiValued>
         <mandatory>false</mandatory>
       </configurationParameter>
     </configurationParameters>
-    <configurationParameterSettings/>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>OutputFile</name>
+        <value>
+          <string>hw1-zhenxial.out</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
     <typeSystemDescription>
       <imports>
         <import name="decriptors.type_system.GeneTS"/>

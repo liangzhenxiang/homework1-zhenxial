@@ -9,13 +9,20 @@
     <vendor/>
     <configurationParameters>
       <configurationParameter>
-        <name>InputDirectory</name>
+        <name>InputFile</name>
         <type>String</type>
         <multiValued>false</multiValued>
         <mandatory>true</mandatory>
       </configurationParameter>
     </configurationParameters>
-    <configurationParameterSettings/>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>InputFile</name>
+        <value>
+          <string>hw1.in</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
     <typeSystemDescription>
       <imports>
         <import name="decriptors.type_system.Line"/>
